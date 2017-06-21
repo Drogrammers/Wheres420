@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3
 """
         Where's 4:20?
     This script lets you answer that question,
@@ -58,7 +58,7 @@ def wheres420() -> str:
             result += "your current timezone "
     else:
         tz = random.choice(picktimezone()).split('/')
-        result += f'{tz[1].replace("_", " ")} (which is in {tz[0]}) '
+        result += '{} (which is in {}) '.format(tz[1].replace("_", " "), tz[0])
     if minutes != 20:
         result += " in {} minutes".format((60-minutes)+20 if minutes > 20 else 20-minutes)
     return result + '!'
